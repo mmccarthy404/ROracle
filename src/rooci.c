@@ -958,9 +958,7 @@ sword roociTerminateCon(roociCon *pcon, boolean validCon)
 
 sword roociBeginCon(roociCon *pcon)
 {
-  sword rc = OCI_ERROR;
-  rc = OCITransStart(pcon->svc_roociCon, pcon->err_roociCon, 0, OCI_DEFAULT);
-  return rc;
+  OCITransStart(pcon->svc_roociCon, pcon->err_roociCon, 0, OCI_DEFAULT);
 } /* end of roociBeginCon */
 
 /* -------------------------- roociCommitCon ------------------------------ */
